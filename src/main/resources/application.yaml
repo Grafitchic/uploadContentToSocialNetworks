@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: uploadContentToSocialNetworks
+  # Database
+  datasource:
+    url: jdbc:postgresql://${POSTGRES:localhost:5432}/${DB_NAME:uploadToSocialNetworks}
+    username: ${POSTGRES_USER:postgres}
+    password: ${POSTGRES_PASSWORD:postgres}
+    hikari.schema: ${DB_SCHEMA:application}
