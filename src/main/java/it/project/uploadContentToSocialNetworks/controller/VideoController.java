@@ -13,8 +13,7 @@ public class VideoController {
 
     @PostMapping(consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
     public String uploadVideo(@RequestPart MultipartFile video) {
-        String name = video.getName();
-        return name;
+        return video.getOriginalFilename();
     }
 
 }

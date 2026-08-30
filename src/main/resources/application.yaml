@@ -7,3 +7,16 @@ spring:
     username: ${POSTGRES_USER:postgres}
     password: ${POSTGRES_PASSWORD:postgres}
     hikari.schema: ${DB_SCHEMA:application}
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+tiktok:
+  url: https://www.tiktok.com/v2
+  client-key: ${TIKTOK_CLIENT_KEY:sbawt0r9teolcl8z7r}
+  client-secret: ${TIKTOK_CLIENT_SECRET:jKTxkVFRKIJcxGiiR4eQdWoH6sHJk1aU}
+  redirect-uri: http://localhost:8080/oauth/callback/
+  scopes:
+    - user.info.basic
+    - video.upload
+#    - video.publish
