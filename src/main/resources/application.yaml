@@ -11,6 +11,14 @@ spring:
     multipart:
       max-file-size: 100MB
       max-request-size: 100MB
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+logging:
+  level:
+    # Рекомендуется указывать конкретный пакет клиента или интерфейс Feign
+    it.project.uploadContentToSocialNetworks.feignclient: DEBUG
+    # Альтернативно: можно включить логирование для всех клиентов Feign
+    # feign.Logger: DEBUG
 tiktok:
   url: https://www.tiktok.com/v2
   client-key: ${TIKTOK_CLIENT_KEY:sbawt0r9teolcl8z7r}
@@ -19,4 +27,7 @@ tiktok:
   scopes:
     - user.info.basic
     - video.upload
-#    - video.publish
+    - video.publish
+bot:
+  name: SocialNetworksContentPosting
+  token: 8675436865:AAE2tFzcdpEHOc56p4P9UYb-_0tZFlek2-8
